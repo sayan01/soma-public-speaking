@@ -19,9 +19,38 @@
 \setbeamercolor{block title}{fg=white, bg=mainblue}
 \setbeamercolor{block body}{fg=black, bg=white!90!mainblue}
 
-% Font settings
-\setmainfont{Helvetica Neue}
-\setsansfont{Helvetica Neue}
+% Font settings for cross-platform compatibility
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  % If using XeTeX, use system fonts that are widely available
+  \setmainfont{Arial}[
+    Ligatures=TeX,
+    BoldFont=Arial Bold,
+    ItalicFont=Arial Italic,
+    BoldItalicFont=Arial Bold Italic]
+  \setsansfont{Arial}[
+    Ligatures=TeX,
+    BoldFont=Arial Bold,
+    ItalicFont=Arial Italic,
+    BoldItalicFont=Arial Bold Italic]
+\else
+  \ifluatex
+    % If using LuaTeX, use system fonts that are widely available
+    \setmainfont{Arial}[
+      Ligatures=TeX,
+      BoldFont=Arial Bold,
+      ItalicFont=Arial Italic,
+      BoldItalicFont=Arial Bold Italic]
+    \setsansfont{Arial}[
+      Ligatures=TeX,
+      BoldFont=Arial Bold,
+      ItalicFont=Arial Italic,
+      BoldItalicFont=Arial Bold Italic]
+  \else
+    % If using PDFLaTeX, use standard LaTeX fonts
+    \usepackage{lmodern}
+  \fi
+\fi
 
 % Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
