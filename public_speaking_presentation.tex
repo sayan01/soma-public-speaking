@@ -6,69 +6,25 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 
-% Set the theme to Metropolis
-\usetheme{metropolis}
-\usecolortheme{metropolis}
+% Set the theme
+\usetheme{Madrid}
+\usecolortheme{default}
 
-% Additional customization for Metropolis theme
-\metroset{titleformat=regular}
-\metroset{numbering=fraction}
-\metroset{progressbar=frametitle}
-
-% Custom colors with improved contrast
-\definecolor{mainblue}{RGB}{23, 64, 139}
+% Colors
+\definecolor{mainblue}{RGB}{31, 119, 180}
 \definecolor{accentorange}{RGB}{255, 127, 14}
-\definecolor{titleblue}{RGB}{41, 128, 185}
-\definecolor{white}{RGB}{255, 255, 255}
-\definecolor{darkblue}{RGB}{0, 51, 102}
+\setbeamercolor{title}{fg=white, bg=mainblue}
+\setbeamercolor{frametitle}{fg=mainblue, bg=white}
+\setbeamercolor{structure}{fg=mainblue}
+\setbeamercolor{block title}{fg=white, bg=mainblue}
+\setbeamercolor{block body}{fg=black, bg=white!90!mainblue}
 
-% Improve contrast for headings
-\setbeamercolor{frametitle}{bg=titleblue, fg=white}
-\setbeamercolor{title}{bg=darkblue, fg=white}
-\setbeamercolor{subtitle}{fg=white}
-\setbeamercolor{author}{fg=white}
-\setbeamercolor{date}{fg=white}
-\setbeamercolor{institute}{fg=white}
-\setbeamercolor{section in toc}{fg=mainblue}
-\setbeamercolor{normal text}{fg=black}
-\setbeamercolor{alerted text}{fg=accentorange}
-\setbeamercolor{block title}{bg=titleblue, fg=white}
-\setbeamercolor{block body}{bg=white!90!titleblue}
+% Font settings
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
 
-% Customize title page for better contrast
-\AtBeginDocument{
-  \setbeamertemplate{title page}{
-    \begin{minipage}[b][\paperheight]{\textwidth}
-      \vspace*{0.1\paperheight}
-      \ifx\inserttitle\@empty\else
-        \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
-          \usebeamerfont{title}\inserttitle\par%
-          \ifx\insertsubtitle\@empty\else
-            \vskip0.25em%
-            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
-          \fi%
-        \end{beamercolorbox}%
-      \fi
-      \vfill
-      \ifx\insertauthor\@empty\else
-        \begin{beamercolorbox}[sep=8pt,center]{author}
-          \usebeamerfont{author}\insertauthor
-        \end{beamercolorbox}
-      \fi
-      \ifx\insertdate\@empty\else
-        \begin{beamercolorbox}[sep=8pt,center]{date}
-          \usebeamerfont{date}\insertdate
-        \end{beamercolorbox}
-      \fi
-      \ifx\insertinstitute\@empty\else
-        \begin{beamercolorbox}[sep=8pt,center]{institute}
-          \usebeamerfont{institute}\insertinstitute
-        \end{beamercolorbox}
-      \fi
-      \vspace*{0.1\paperheight}
-    \end{minipage}
-  }
-}
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
 
 % Title information
 \title{The Importance of Public Speaking Skills}
@@ -76,9 +32,6 @@
 \author{Soma Saha}
 \date{April 7, 2025}
 \institute{Shristi Global School}
-
-% Remove navigation symbols
-\setbeamertemplate{navigation symbols}{}
 
 \begin{document}
 
